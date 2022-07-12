@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 
 import Home from './pages/Home.js'
 import Login from './pages/Login.js'
 import CreatePoetry from './pages/CreatePoetry.js'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import NavBar from './Layout/NavBar.js';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
    <Router>
       <NavBar udahAuth={isAuth} setIsAuth={setIsAuth}/>
       <Routes>
-        <Route path='/' element={<Home />}></Route>
+        <Route path='/' element={<Home isAuth={isAuth} />}></Route>
         <Route path='/createpoetry' element={<CreatePoetry isAuth={isAuth} />}></Route>
         <Route path='/login' element={<Login setIsAuth={setIsAuth}/>}></Route>
       </Routes>

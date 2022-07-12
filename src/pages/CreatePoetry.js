@@ -33,7 +33,6 @@ const CreatePoetry = ({isAuth}) => {
         if(!isAuth) {
             navigasi('/login')
         }
-
     }, [])
     
 

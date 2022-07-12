@@ -25,8 +25,11 @@ const NavBar = ({udahAuth, setIsAuth}) => {
                         <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="/createpoetry">Create Poetry</Nav.Link>
-                            {!udahAuth ? <Nav.Link href="/login">Login</Nav.Link> : <button onClick={logOut}>Log Out</button>}
+
+                            {!udahAuth ? "" : <Nav.Link href="/createpoetry">Create Poetry</Nav.Link>}
+                            
+
+                            {!udahAuth ? <Nav.Link href="/login">Login</Nav.Link> : <button className="btn-danger" onClick={logOut}>Log Out</button>}
                             
                         </Nav>
                         </Navbar.Collapse>
