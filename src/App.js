@@ -17,7 +17,7 @@ function App() {
       <NavBar udahAuth={isAuth} setIsAuth={setIsAuth}/>
       <Routes>
         <Route path='/' element={<Home />}></Route>
-        <Route path='/createpoetry' element={<CreatePoetry />}></Route>
+        <Route path='/createpoetry' element={<CreatePoetry isAuth={isAuth} />}></Route>
         <Route path='/login' element={<Login setIsAuth={setIsAuth}/>}></Route>
       </Routes>
    </Router>
